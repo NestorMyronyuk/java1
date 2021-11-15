@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Gradle Test Executor 2" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-09T07:49:18" hostname="DESKTOP-I7R6CT0" time="0.154">
+  <properties/>
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 2" time="0.154">
+    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not execute test class 'lab1_test.WorkerTest'." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not execute test class 'lab1_test.WorkerTest'.
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.gradle.api.GradleException: Could not load test class 'lab1_test.WorkerTest'.
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.processTestClass(TestNGTestClassProcessor.java:83)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	... 25 more
+Caused by: java.lang.ClassNotFoundException: lab1_test.WorkerTest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.processTestClass(TestNGTestClassProcessor.java:81)
+	... 26 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[Usage: <main class> [options] The XML suite files to run
+  Options:
+    -alwaysrunlisteners
+      Should MethodInvocation Listeners be run even for skipped methods
+      Default: true
+    -configfailurepolicy
+      Configuration failure policy (skip or continue)
+    -d
+      Output directory
+    -dataproviderthreadcount
+      Number of threads to use when running data providers
+    -dependencyinjectorfactory
+      The dependency injector factory implementation that TestNG should use.
+    -excludegroups
+      Comma-separated list of group names to  exclude
+    -failwheneverythingskipped
+      Should TestNG fail execution if all tests were skipped and nothing was 
+      run. 
+      Default: false
+    -groups
+      Comma-separated list of group names to be run
+    -junit
+      JUnit mode
+      Default: false
+    -listener
+      List of .class files or list of class names implementing ITestListener 
+      or ISuiteListener
+    -methods
+      Comma separated of test methods
+      Default: []
+    -methodselectors
+      List of .class files or list of class names implementing IMethodSelector
+    -mixed
+      Mixed mode - autodetect the type of current test and run it with 
+      appropriate runner
+      Default: false
+    -objectfactory
+      List of .class files or list of class names implementing 
+      ITestRunnerFactory 
+    -overrideincludedmethods
+      Comma separated fully qualified class names of listeners that should be 
+      skipped from being wired in via Service Loaders.
+      Default: false
+    -parallel
+      Parallel mode (methods, tests or classes)
+      Possible Values: [tests, methods, classes, instances, none]
+    -port
+      The port
+    -reporter
+      Extended configuration for custom report listener
+    -spilistenerstoskip
+      Comma separated fully qualified class names of listeners that should be 
+      skipped from being wired in via Service Loaders.
+      Default: <empty string>
+    -suitename
+      Default name of test suite, if not specified in suite definition file or 
+      source code
+    -suitethreadpoolsize
+      Size of the thread pool to use to run suites
+      Default: 1
+    -testclass
+      The list of test classes
+    -testjar
+      A jar file containing the tests
+    -testname
+      Default name of test, if not specified in suitedefinition file or source 
+      code 
+    -testnames
+      The list of test names to run
+    -testrunfactory, -testRunFactory
+      The factory used to create tests
+    -threadcount
+      Number of threads to use when running tests in parallel
+    -threadpoolfactoryclass
+      The threadpool executor factory implementation that TestNG should use.
+    -usedefaultlisteners
+      Whether to use the default listeners
+      Default: true
+    -log, -verbose
+      Level of verbosity
+    -xmlpathinjar
+      The full path to the xml file inside the jar file (only valid if 
+      -testjar was specified)
+      Default: testng.xml
+
+]]></system-out>
+  <system-err><![CDATA[[TestNG] [ERROR] No test suite found. Nothing to run
+]]></system-err>
+</testsuite>
